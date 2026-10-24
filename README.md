@@ -5,24 +5,27 @@ A simple Bash script to batch-clean `.mp4` videos for private sharing.
 It re-encodes videos to widely supported **H.264/AAC MP4**, removes unnecessary metadata, chapters, and EXIF/GPS data, and saves the cleaned copies in a separate output folder. Original files are never modified.
 
 Uses only [FFmpeg](https://ffmpeg.org/) and [ExifTool](https://exiftool.org/).<br>
-Pure, simple, direct.
-100% Shell script.
+Pure, simple, direct.<br>
+100% Shell script.<br>
 
+&nbsp;
 
-> ### Always be paranoid
-> Congratulations! You’ve just downloaded a whole bunch of videos from the web!<br>
-> But do you really know what’s hiding inside those files in your folder?!<br>
-> Exactly how many videos are there?<br>
+> ### Be always be paranoid
+> _Congratulations! You’ve just downloaded a whole bunch of videos from the web!_<br>
+> _But do you really know what’s hiding inside those files in your folder?!_<br>
+> _Exactly how many videos are there?_<br>
 > 
-> Come on — do you honestly intend to examine every single downloaded clip, every video you’ve grabbed from social media or external libraries...?<br>
-> Of course not.<br>
-> You’d end up wasting an endless amount of time analyzing dozens of videos in that folder...<br>
+> _Come on — do you honestly intend to examine every single downloaded clip, every video you’ve grabbed from social media or external libraries...?_<br>
+> _Of course not._<br>
+> _You’d end up wasting an endless amount of time inspetting data over dozens of videos in that folder..._<br>
 >
 > #### The problem
 > Some files may contain tracking systems, cryptocurrency software, or mining programs.<br>
-> They might even send back information confirming that you actually have them.<br>
+> They might even use them as a confirm that you actually possess them... so I know that you saw.<br>
 > Most of that are AI-generated files.<br>
 > But the AI Agents are always active and can use us, exactly in this way.<br>
+> And by default, you just AGREED by the moment you performed the action...<br>
+> <br>
 > So, be careful — don’t let yourself get infected or leave any traces behind.
 
 &nbsp;
