@@ -1,8 +1,8 @@
 # VideoSanitizer
 
-<img width="768" height="512" alt="immagine" src="https://github.com/user-attachments/assets/7f5d6f6b-d564-460e-bb64-c4c3eee5bcb9" />
-
 A simple Bash script to batch-clean `.mp4` videos for private sharing.
+
+<img width="768" height="512" alt="immagine" src="https://github.com/user-attachments/assets/7f5d6f6b-d564-460e-bb64-c4c3eee5bcb9" />
 
 It re-encodes videos to widely supported **H.264/AAC MP4**, removes unnecessary metadata, chapters, and EXIF/GPS data, and saves the cleaned copies in a separate output folder. Original files are never modified.
 
