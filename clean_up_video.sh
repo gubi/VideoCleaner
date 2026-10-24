@@ -1,23 +1,27 @@
 #!/usr/bin/env bash
-#
-# clean_videos.sh
-#
+
+# clean_up_video.sh
+
+# Author: Alessandro Gubitosi
+# License: public domain
+# 
+
 # Processes all .mp4 files in a folder:
-# - Re-encodes them to H.264/AAC for better compatibility (e.g. SimpleX)
 # - Removes metadata, chapters, and EXIF/GPS data using FFmpeg and ExifTool
+# - Re-encodes them to H.264/AAC for better compatibility (e.g. SimpleX or WhatsApp)
 # - Saves the results to a separate output folder without modifying the originals
 #
 # Usage:
-#   ./clean_videos.sh [SOURCE_FOLDER] [OUTPUT_FOLDER] [THREADS]
+#   ./clean_up_video.sh [SOURCE_FOLDER] [OUTPUT_FOLDER] [THREADS]
 #
 # Examples:
-#   ./clean_videos.sh
+#   ./clean_up_video.sh
 #       Processes MP4 files in the current folder and saves them to ./clean
 #
-#   ./clean_videos.sh /path/to/videos /path/to/output
+#   ./clean_up_video.sh /path/to/videos /path/to/output
 #       Processes /path/to/videos and saves the results in /path/to/output
 #
-#   ./clean_videos.sh . clean 2
+#   ./clean_up_video.sh . clean 2
 #       Processes the current folder, saves results to ./clean,
 #       and limits FFmpeg to 2 threads
 #
