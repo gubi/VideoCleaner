@@ -5,6 +5,10 @@ A simple Bash script to batch-clean `.mp4` videos for private sharing.
 It re-encodes videos to widely supported **H.264/AAC MP4**, removes unnecessary metadata, chapters, and EXIF/GPS data, and saves the cleaned copies in a separate output folder. Original files are never modified.
 
 Uses only [FFmpeg](https://ffmpeg.org/) and [ExifTool](https://exiftool.org/).
+Pure, simple, direct.
+
+### Always be paranoid
+This is a 100% Shell script!
 
 ## Features
 
