@@ -12,7 +12,7 @@ Pure, simple, direct.<br>
 
 &nbsp;
 
-> ### Be always be paranoid
+> ### Always be paranoid
 > _Congratulations! You’ve just downloaded a whole bunch of videos from the web!_<br>
 > _But do you really know what’s hiding inside those files in your folder?!_<br>
 > _Exactly how many videos are there?_<br>
