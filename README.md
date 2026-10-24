@@ -30,12 +30,18 @@ Pure, simple, direct.<br>
 > <br>
 > So, be careful — don’t let yourself get infected or leave any traces behind.
 >
+> <br>
+>
+> ##### See more
+>
 > - Shocking declarations: https://mega.nz/file/DX5zUDjJ#KMCsGXvCYgSiGwrVr3NDIM9ZTM55CInK_qKXRAFe-tM
-> ---
 > - [The Metadata Problem: How Your Documents Reveal Your Identity, Infrastructure, and Projects](https://medium.com/@ingvarpavlovich/the-metadata-problem-how-your-documents-reveal-your-identity-infrastructure-and-projects-d9dd0ea41efb)
-> - Exif tool online: [exif.tools](https://exif.tools/)
 
 &nbsp;
+
+## Useful resources
+
+Exif tool online service: [exif.tools](https://exif.tools/)
 
 ## Features
 
