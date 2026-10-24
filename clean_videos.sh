@@ -42,30 +42,33 @@ for f in "$SRC_DIR"/*.mp4; do
   base="$(basename "$f" .mp4)"
   out="$OUT_DIR/${base}_clean.mp4"
 
-  echo "Elaboro: $f"
+  echo "Loading: $f"
 
-  ffmpeg -y -i "$f" \
-    -map_metadata -1 \
-    -map_chapters -1 \
-    -fflags +bitexact \
-    -c:v libx264 \
-    -preset medium \
-    -crf 23 \
-    -threads "$THREADS" \
-    -vf "scale=-2:1080" \
-    -c:a aac -b:a 128k \
-    -movflags +faststart \
-    "$out"
+  ffmpeg
+    -y                      # Overwrite the output file (if exists) without asking
+    -i "$f" \               # The input file
+    -map_metadata -1 \      # Stripcontainer metadata: title, author, comments, creation date, GPS and others tags, when present
+    -map_chapters -1 \      # Remove chapters if present
+    -fflags +bitexact \     # Avoid FFmpeg version writing and other unnecessary encoding metadata
+    -c:v libx264 \          # Recoved the video to `H.264/AVC`, majourly compatible
+    -preset medium \        # Bilance speed and encoding, CPU usage and compression
+    -crf 23 \               # Sets quality: lower values means more quality but bigger files
+    -threads "$THREADS" \   # Limits the number of thread/cores used by `libx264`
+    -vf "scale=-2:1080" \   # Ridimensiona il video a 1080p mantenendo le proporzioni originali; -2 calcola automaticamente la larghezza corretta
+    -c:a aac -b:a 128k \    # Recode audio in AAC
+    -movflags +faststart \  # Move MP4 metadata to the beginning of file, useful for previews and progressive loadings
+    "$out"                  # The output file
 
-  exiftool -overwrite_original \
-    -all= \
-    -tagsfromfile @ \
-    -XMP:all= \
-    -EXIF:all= \
-    -GPS:all= \
-    "$out"
+  exiftool
+    -overwrite_original \   # Edit directly this file, withount creating the `_original` copy
+    -all= \                 # Remove all file writeable
+    -tagsfromfile @ \       # Reload tags from the file itself - Ensure that subsequent removals are applied correctly
+    -XMP:all= \             # Remove XMP metadata
+    -EXIF:all= \            # Remove EXIF metadata
+    -GPS:all= \             # Remove geolocaliation metadata
+    "$out"                  # The output file
 
-  echo "Creato: $out"
+  echo "Created: $out"
 done
 
-echo "Completato."
+echo "Done"
