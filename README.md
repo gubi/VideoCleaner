@@ -22,11 +22,11 @@ Pure, simple, direct.<br>
 > _You’d end up wasting an endless amount of time inspetting data over dozens of videos in that folder..._<br>
 >
 > #### The problem
-> Some files may contain tracking systems, cryptocurrency software, or mining programs.<br>
-> They might even use them as a confirm that you actually possess them... so I know that you saw.<br>
+> Some files may contain tracking systems, cryptocurrency malware, or mining programs.<br>
+> They can use them as a confirm that you actually possess the file... so I know that you saw.<br>
 > Most of that are AI-generated files.<br>
-> But the AI Agents are always active and can use us, exactly in this way.<br>
-> And by default, you just AGREED by the moment you performed the action...<br>
+> But the AI Agents are always active and can use us, exactly in this way: just waiting data comes back.<br>
+> And by default, you simply AGREED the moment you performed the action...<br>
 > <br>
 > So, be careful — don’t let yourself get infected or leave any traces behind.
 
