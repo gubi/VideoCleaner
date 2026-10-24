@@ -33,14 +33,14 @@ sudo apt install ffmpeg libimage-exiftool-perl
 Clone the repository:
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/PrivacyVideoSanitizer.git](https://github.com/YOUR_USERNAME/PrivacyVideoSanitizer.git)
-cd PrivacyVideoSanitizer
+git clone [https://github.com/YOUR_USERNAME/VideoSanitizer.git](https://github.com/YOUR_USERNAME/VideoSanitizer.git)
+cd VideoSanitizer
 ```
 
 Make the script executable:
 
 ```bash
-chmod +x clean_videos.sh
+chmod +x video_sanitizer.sh
 ```
 
 ## Usage
@@ -48,13 +48,13 @@ chmod +x clean_videos.sh
 Run the script from the folder containing your videos:
 
 ```bash
-./clean_videos.sh
+./video_sanitizer.sh
 ```
 
 Or specify the source folder, output folder, and maximum number of threads:
 
 ```bash
-./clean_videos.sh ./videos ./clean 2
+./video_sanitizer.sh ./videos ./clean 2
 ```
 
 ### Arguments
@@ -70,13 +70,13 @@ Or specify the source folder, output folder, and maximum number of threads:
 Process the current folder and save cleaned files to `./clean`:
 
 ```bash
-./clean_videos.sh
+./video_sanitizer.sh
 ```
 
 Process `./videos`, save output to `./output`, and use 1 thread:
 
 ```bash
-./clean_videos.sh ./videos ./output 1
+./video_sanitizer.sh ./videos ./output 1
 ```
 
 Lower thread counts reduce CPU usage but increase processing time. For minimal CPU impact, use `1`.
