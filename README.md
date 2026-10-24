@@ -59,14 +59,14 @@ sudo apt install ffmpeg libimage-exiftool-perl
 Clone the repository:
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/VideoCleaner.git](https://github.com/YOUR_USERNAME/VideoCleaner.git)
+git clone https://github.com/gubi/VideoCleaner.git
 cd VideoCleaner
 ```
 
 Make the script executable:
 
 ```bash
-chmod +x video_cleaner.sh
+chmod +x clean_up_video.sh
 ```
 
 ## Usage
@@ -74,13 +74,13 @@ chmod +x video_cleaner.sh
 Run the script from the folder containing your videos:
 
 ```bash
-./video_cleaner.sh
+./clean_up_video.sh
 ```
 
 Or specify the source folder, output folder, and maximum number of threads:
 
 ```bash
-./video_cleaner.sh ./videos ./clean 2
+./clean_up_video.sh ./videos ./clean 2
 ```
 
 ### Arguments
@@ -96,13 +96,13 @@ Or specify the source folder, output folder, and maximum number of threads:
 Process the current folder and save cleaned files to `./clean`:
 
 ```bash
-./video_cleaner.sh
+./clean_up_video.sh
 ```
 
 Process `./videos`, save output to `./output`, and use 1 thread:
 
 ```bash
-./video_cleaner.sh ./videos ./output 1
+./clean_up_video.sh ./videos ./output 1
 ```
 
 Lower thread counts reduce CPU usage but increase processing time. For minimal CPU impact, use `1`.
