@@ -16,7 +16,7 @@ Pure, simple, direct.<br>
 > _Congratulations! You’ve just downloaded a whole bunch of videos from the web!_<br>
 > _But do you really know what’s hiding inside those files in your folder?!_<br>
 > _Exactly how many videos are there?_<br>
-> 
+>
 > _Come on — do you honestly intend to examine every single downloaded clip, every video you’ve grabbed from social media or external libraries...?_<br>
 > _Of course not._<br>
 > _You’d end up wasting an endless amount of time inspetting data over dozens of videos in that folder..._<br>
@@ -29,6 +29,11 @@ Pure, simple, direct.<br>
 > And by default, you simply AGREED the moment you performed the action...<br>
 > <br>
 > So, be careful — don’t let yourself get infected or leave any traces behind.
+>
+> - Shocking declarations: https://mega.nz/file/DX5zUDjJ#KMCsGXvCYgSiGwrVr3NDIM9ZTM55CInK_qKXRAFe-tM
+> ---
+> - [The Metadata Problem: How Your Documents Reveal Your Identity, Infrastructure, and Projects](https://medium.com/@ingvarpavlovich/the-metadata-problem-how-your-documents-reveal-your-identity-infrastructure-and-projects-d9dd0ea41efb)
+> - Exif tool online: [exif.tools](https://exif.tools/)
 
 &nbsp;
 
