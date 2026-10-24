@@ -85,7 +85,7 @@ chmod +x clean_up_video.sh
 Run the script from the folder containing your videos:
 
 ```bash
-./clean_up_video.sh
+./clean_up_video.sh [SOURCE_FOLDER] [OUTPUT_FOLDER] [THREADS] [AUDIO_KBPS]
 ```
 
 Or specify the source folder, output folder, and maximum number of threads:
@@ -101,6 +101,7 @@ Or specify the source folder, output folder, and maximum number of threads:
 | `SOURCE_FOLDER` | Folder containing the `.mp4` files to process | `.` |
 | `OUTPUT_FOLDER` | Folder where cleaned videos are saved | `clean` |
 | `THREADS` | Maximum number of FFmpeg threads/cores to use | `2` |
+| `AUDIO_KBPS` | Audio bitrate in kbps | `96` |
 
 ### Examples
 
@@ -110,12 +111,20 @@ Process the current folder and save cleaned files to `./clean`:
 ./clean_up_video.sh
 ```
 
+Process `/path/to/videos` and save the results in `/path/to/output`:
+
+```bash
+./clean_up_video.sh /path/to/videos /path/to/output
+```
+
 Process `./videos`, save output to `./output`, and use 1 thread:
 
 ```bash
-./clean_up_video.sh ./videos ./output 1
+./clean_up_video.sh . clean 2 96 1
 ```
 
+Compress to approximately 50% of the original size.
+Change "0.70" in the TARGET_RATIO variable below to "0.50".
 Lower thread counts reduce CPU usage but increase processing time. For minimal CPU impact, use `1`.
 
 ## What the script does
