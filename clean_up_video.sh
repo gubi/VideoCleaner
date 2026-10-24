@@ -54,11 +54,11 @@ for f in "$SRC_DIR"/*.mp4; do
     -map_metadata -1 \      # Stripcontainer metadata: title, author, comments, creation date, GPS and others tags, when present
     -map_chapters -1 \      # Remove chapters if present
     -fflags +bitexact \     # Avoid FFmpeg version writing and other unnecessary encoding metadata
-    -c:v libx264 \          # Recoved the video to `H.264/AVC`, majourly compatible
+    -c:v libx264 \          # Convert the video to `H.264/AVC`, majourly compatible
     -preset medium \        # Bilance speed and encoding, CPU usage and compression
     -crf 23 \               # Sets quality: lower values means more quality but bigger files
     -threads "$THREADS" \   # Limits the number of thread/cores used by `libx264`
-    -vf "scale=-2:1080" \   # Ridimensiona il video a 1080p mantenendo le proporzioni originali; -2 calcola automaticamente la larghezza corretta
+    -vf "scale=-2:1080" \   # Resize the video to 1080p maintaining original proportions; `-2` = Calculate automatically the correct width
     -c:a aac -b:a 128k \    # Recode audio in AAC
     -movflags +faststart \  # Move MP4 metadata to the beginning of file, useful for previews and progressive loadings
     "$out"                  # The output file
