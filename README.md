@@ -1,4 +1,4 @@
-# VideoSanitizer
+# VideoCleaner
 
 A simple Bash script to batch-clean `.mp4` videos for private sharing.
 
@@ -59,14 +59,14 @@ sudo apt install ffmpeg libimage-exiftool-perl
 Clone the repository:
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/VideoSanitizer.git](https://github.com/YOUR_USERNAME/VideoSanitizer.git)
-cd VideoSanitizer
+git clone [https://github.com/YOUR_USERNAME/VideoCleaner.git](https://github.com/YOUR_USERNAME/VideoCleaner.git)
+cd VideoCleaner
 ```
 
 Make the script executable:
 
 ```bash
-chmod +x video_sanitizer.sh
+chmod +x video_cleaner.sh
 ```
 
 ## Usage
@@ -74,13 +74,13 @@ chmod +x video_sanitizer.sh
 Run the script from the folder containing your videos:
 
 ```bash
-./video_sanitizer.sh
+./video_cleaner.sh
 ```
 
 Or specify the source folder, output folder, and maximum number of threads:
 
 ```bash
-./video_sanitizer.sh ./videos ./clean 2
+./video_cleaner.sh ./videos ./clean 2
 ```
 
 ### Arguments
@@ -96,13 +96,13 @@ Or specify the source folder, output folder, and maximum number of threads:
 Process the current folder and save cleaned files to `./clean`:
 
 ```bash
-./video_sanitizer.sh
+./video_cleaner.sh
 ```
 
 Process `./videos`, save output to `./output`, and use 1 thread:
 
 ```bash
-./video_sanitizer.sh ./videos ./output 1
+./video_cleaner.sh ./videos ./output 1
 ```
 
 Lower thread counts reduce CPU usage but increase processing time. For minimal CPU impact, use `1`.
