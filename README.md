@@ -1,4 +1,4 @@
-# PrivacyVideoSanitizer
+# VideoSanitizer
 
 A simple Bash script to batch-clean `.mp4` videos for private sharing.
 
