@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # clean_up_video.sh
-
+#
 # Author: Alessandro Gubitosi
 # License: public domain
-# 
+# ---
 
 # Processes all .mp4 files in a folder:
 # - Removes metadata, chapters, and EXIF/GPS data using FFmpeg and ExifTool
@@ -16,13 +16,13 @@
 #
 # Examples:
 #   ./clean_up_video.sh
-#       Processes MP4 files in the current folder and saves them to ./clean
+#       Process all MP4 files in the current folder and saves them to ./clean
 #
 #   ./clean_up_video.sh /path/to/videos /path/to/output
-#       Processes /path/to/videos and saves the results in /path/to/output
+#       Process /path/to/videos and saves the results in /path/to/output
 #
 #   ./clean_up_video.sh . clean 2
-#       Processes the current folder, saves results to ./clean,
+#       Process the current folder, saves results to ./clean,
 #       and limits FFmpeg to 2 threads
 #
 # Requirements:
@@ -49,15 +49,15 @@ for f in "$SRC_DIR"/*.mp4; do
   echo "Loading: $f"
 
   ffmpeg
-    -y                      # Overwrite the output file (if exists) without asking
+    -y                      # Overwrite the output file without asking (if exists)
     -i "$f" \               # The input file
-    -map_metadata -1 \      # Stripcontainer metadata: title, author, comments, creation date, GPS and others tags, when present
+    -map_metadata -1 \      # Strip container metadata: title, author, comments, creation date, GPS and others tags, when present
     -map_chapters -1 \      # Remove chapters if present
     -fflags +bitexact \     # Avoid FFmpeg version writing and other unnecessary encoding metadata
     -c:v libx264 \          # Convert the video to `H.264/AVC`, majourly compatible
     -preset medium \        # Bilance speed and encoding, CPU usage and compression
     -crf 23 \               # Sets quality: lower values means more quality but bigger files
-    -threads "$THREADS" \   # Limits the number of thread/cores used by `libx264`
+    -threads "$THREADS" \   # Limits the number of thread/cores used by `libx264` on your machine
     -vf "scale=-2:1080" \   # Resize the video to 1080p maintaining original proportions; `-2` = Calculate automatically the correct width
     -c:a aac -b:a 128k \    # Recode audio in AAC
     -movflags +faststart \  # Move MP4 metadata to the beginning of file, useful for previews and progressive loadings
