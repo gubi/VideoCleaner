@@ -102,7 +102,7 @@ Or specify the source folder, output folder, and maximum number of threads:
 | `OUTPUT_FOLDER` | Folder where cleaned videos are saved | `clean` |
 | `THREADS` | Maximum number of FFmpeg threads/cores to use | `2` |
 | `AUDIO_KBPS` | Audio bitrate in kbps | `96` |
-| `TARGET_RATIO` | The target output size | 0.70 (70% respect the input) |
+| `TARGET_RATIO` | The target output size (percentage) | `0.70` (70%) |
 
 ### Examples
 
