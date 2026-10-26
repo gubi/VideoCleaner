@@ -112,6 +112,7 @@ PASSLOG="$OUT.passlog"
 # -an: disable audio processing in the analysis pass
 # -f null /dev/null: discard the temporary first-pass output
 ffmpeg -y -i "$INPUT" \
+  -threads "$THREADS" \
   -map 0:v:0 -map 0:a:0? \
   -map_metadata -1 -map_metadata:s:v:0 -1 -map_metadata:s:a:0 -1 \
   -map_chapters -1 \
@@ -141,6 +142,7 @@ ffmpeg -y -i "$INPUT" \
 #                       improving preview and progressive playback
 # "$OUT": final cleaned output file
 ffmpeg -y -i "$INPUT" \
+  -threads "$THREADS" \
   -map 0:v:0 -map 0:a:0? \
   -map_metadata -1 -map_metadata:s:v:0 -1 -map_metadata:s:a:0 -1 \
   -map_chapters -1 \
