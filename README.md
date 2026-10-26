@@ -146,4 +146,4 @@ For each input video, the script:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Public Domain](https://github.com/gubi/VideoCleaner/blob/master/LICENSE)
