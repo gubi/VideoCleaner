@@ -140,6 +140,7 @@ for f in "$SRC_DIR"/*.mp4; do
   # -f null /dev/null: discard the temporary first-pass output
   ffmpeg -y \
     -i "$f" \
+    -threads "$THREADS" \
     -map 0:v:0 \
     -map 0:a:0? \
     -map_metadata -1 \
@@ -175,6 +176,7 @@ for f in "$SRC_DIR"/*.mp4; do
   # "$out": final cleaned output file
   ffmpeg -y \
     -i "$f" \
+    -threads "$THREADS" \
     -map 0:v:0 \
     -map 0:a:0? \
     -map_metadata -1 \
